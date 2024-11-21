@@ -1,0 +1,12 @@
+<div *ngIf="movies && movies.length > 0; else noResults" class="movie-grid">
+  <div *ngFor="let movie of movies" class="movie-item">
+    <img [src]="movie.Poster" alt="{{ movie.Title }}" (click)="viewDetails(movie.imdbID)" style="cursor: pointer;" />
+    <h3>{{ movie.Title }}</h3>
+    <p><strong>Ano:</strong> {{ movie.Year }}</p>
+    <button (click)="addToFavorites(movie)">Adicionar aos Favoritos</button>
+  </div>
+</div>
+
+<ng-template #noResults>
+  <p>Nenhum resultado encontrado.</p>
+</ng-template>

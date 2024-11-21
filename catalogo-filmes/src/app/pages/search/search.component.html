@@ -1,0 +1,23 @@
+<div class="search-bar-container">
+  <!-- Dropdown para filtrar por gênero -->
+  <label for="genre" style="color: #fff;">Gênero:</label>
+  <select id="genre" [(ngModel)]="selectedGenre">
+    <option value="">Todos</option>
+    <option value="Action">Ação</option>
+    <option value="Comedy">Comédia</option>
+    <option value="Drama">Drama</option>
+  </select>
+
+  <!-- Campo de busca -->
+  <input
+    [(ngModel)]="searchQuery"
+    placeholder="Busque por um filme ou série"
+    type="text"
+  />
+
+  <!-- Botão de busca -->
+  <button class="search-button" (click)="searchMovies()">Buscar</button>
+</div>
+
+<div *ngIf="loading" class="spinner"></div>
+<app-movie-list [movies]="movies"></app-movie-list>

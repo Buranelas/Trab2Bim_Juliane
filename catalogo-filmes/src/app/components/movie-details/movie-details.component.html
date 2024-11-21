@@ -1,0 +1,29 @@
+<div *ngIf="loading" class="spinner"></div>
+
+<!-- Exibe os detalhes do filme quando carregados -->
+<div *ngIf="!loading && movie" class="movie-details">
+  <h2>{{ movie.Title }}</h2>
+  <img [src]="movie.Poster" alt="{{ movie.Title }}" />
+  <p><strong>Ano:</strong> {{ movie.Year }}</p>
+  <p><strong>Lançado:</strong> {{ movie.Released }}</p>
+  <p><strong>Duração:</strong> {{ movie.Runtime }}</p>
+  <p><strong>Gênero:</strong> {{ movie.Genre }}</p>
+  <p><strong>Diretor:</strong> {{ movie.Director }}</p>
+  <p><strong>Escritor(es):</strong> {{ movie.Writer }}</p>
+  <p><strong>Elenco:</strong> {{ movie.Actors }}</p>
+  <p><strong>Sinopse:</strong> {{ movie.Plot }}</p>
+  <p><strong>Linguagem:</strong> {{ movie.Language }}</p>
+  <p><strong>País:</strong> {{ movie.Country }}</p>
+  <p><strong>Prêmios:</strong> {{ movie.Awards }}</p>
+  <p><strong>Bilheteria:</strong> {{ movie.BoxOffice }}</p>
+  <p><strong>Produção:</strong> {{ movie.Production }}</p>
+  <p><strong>Website:</strong> <a [href]="movie.Website" target="_blank">{{ movie.Website }}</a></p>
+  <p><strong>Avaliação IMDB:</strong> {{ movie.imdbRating }}</p>
+  <p><strong>Votos IMDB:</strong> {{ movie.imdbVotes }}</p>
+  <p><strong>Classificação:</strong> {{ movie.Rated }}</p>
+</div>
+
+<!-- Mensagem de erro caso os dados não sejam carregados -->
+<div *ngIf="!loading && !movie">
+  <p>Não foi possível carregar os detalhes do filme.</p>
+</div>

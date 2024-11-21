@@ -1,0 +1,360 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #121212;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+  }
+
+  body.light-theme {
+    background-color: #f3f3f3;
+    color: #121212;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Estilo do cabeçalho */
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #1f1f1f;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #444;
+  }
+  
+  header h1 {
+    font-size: 24px;
+  }
+  
+  header nav a {
+    margin-right: 15px;
+    color: #fff;
+    font-size: 18px;
+    transition: color 0.3s ease;
+  }
+  
+  header nav a:hover {
+    color: #00bcd4;
+  }
+  
+  /* Input de busca */
+  input[type='text'] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    outline: none;
+  }
+  
+  button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #00bcd4;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #0097a7;
+  }
+  
+  /* Lista de filmes */
+  .movie-item {
+    background-color: #1f1f1f;
+    border-radius: 6px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 15px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+  }
+  
+  .movie-item img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+  
+  .movie-item h3 {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+  
+  .movie-item p {
+    font-size: 14px;
+    color: #ccc;
+  }
+  
+  /* Detalhes do filme */
+  .movie-details {
+    background-color: #1f1f1f;
+    border-radius: 6px;
+    padding: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
+  }
+  
+  .movie-details img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+  }
+  
+  .movie-details h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .movie-details p {
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #ccc;
+  }
+  
+  /* Favoritos */
+  .favorites {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .favorite-item {
+    background-color: #1f1f1f;
+    border-radius: 6px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+  }
+  
+  .favorite-item img {
+    width: 100px;
+    height: 150px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+  
+  .favorite-item h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .favorite-item button {
+    background-color: #e91e63;
+  }
+  
+  .favorite-item button:hover {
+    background-color: #c2185b;
+  }
+  
+  /* Mensagens de erro ou estados vazios */
+  p {
+    text-align: center;
+    font-size: 16px;
+    color: #ccc;
+    margin-top: 20px;
+  }
+  
+  .ng-template {
+    text-align: center;
+    color: #ccc;
+  }
+
+  /* Estilo para os filmes em grid */
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.movie-item {
+  background-color: #1f1f1f;
+  padding: 15px;
+  border-radius: 6px;
+  text-align: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.movie-item img {
+  width: 100%;
+  height: 300px; 
+  object-fit: cover; 
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.movie-item button {
+  margin-top: 10px;
+  padding: 8px 12px;
+  background-color: #00bcd4;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.movie-item button:hover {
+  background-color: #0097a7;
+}
+
+/* Estilizando o container da barra de pesquisa */
+.search-bar-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #1e1e1e;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Campo de texto da busca */
+.search-bar-container input[type="text"] {
+  flex: 1;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.search-bar-container input[type="text"]:focus {
+  box-shadow: 0 0 10px #00bcd4;
+  border: 2px solid #00bcd4;
+}
+
+/* Dropdown de gêneros */
+.search-bar-container select {
+  padding: 10px 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  background-color: #2a2a2a;
+  color: #fff;
+  cursor: pointer;
+}
+
+.search-bar-container select:hover {
+  background-color: #00bcd4;
+}
+
+/* Botão de busca */
+.search-bar-container button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #00bcd4;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-bar-container button:hover {
+  background-color: #0097a7;
+}
+
+/* Animação de pulso no botão enquanto carrega */
+.search-button.loading {
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    background-color: #00bcd4;
+  }
+  50% {
+    transform: scale(1.05);
+    background-color: #0097a7;
+  }
+  100% {
+    transform: scale(1);
+    background-color: #00bcd4;
+  }
+}
+
+
+
+nav a {
+  margin: 0 10px;
+  color: #00bcd4;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a.active {
+  color: #fff; /* Cor diferente para o link ativo */
+  text-decoration: underline;
+}
+
+.spinner {
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #00bcd4;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+@media (max-width: 768px) {
+  .movie-grid {
+    grid-template-columns: repeat(2, 1fr); /* Duas colunas no mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .movie-grid {
+    grid-template-columns: 1fr; /* Uma coluna em telas menores */
+  }
+}
+
+
+  

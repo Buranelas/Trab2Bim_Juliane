@@ -1,0 +1,12 @@
+<header>
+  <h1>Catálogo de Filmes</h1>
+  <nav>
+    <a routerLink="/"  href="/" routerLinkActive="active">Buscar Filmes</a>
+    <a routerLink="/favorites"  href="/favorites" routerLinkActive="active">Favoritos</a>
+    <button (click)="toggleTheme()">Alternar Tema</button>
+  </nav>
+</header>
+
+<main>
+  <router-outlet></router-outlet>
+</main>
